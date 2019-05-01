@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+.nav {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+.nav li {
+    color: white;
+    font-size: 16px;
+    padding: 0 5px 0 0;
+}
+
+#filler1 {
+    width: 100%;
+    height: 80px;
+}
+
+.container1 {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url("./Image/1531546459233-kopi.jpg");
+    background-repeat: no-repeat;
+    background-position:40% 10%;
+    background-size: auto;
+}
+
+.container1 h1{
+    font-size: 70px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin: auto;
+    scroll-snap-align: start;
+}
+
+.container1 p{
+    margin: auto;
+    width: 85%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./Image/1553459502845-kopi.jpg');
+    background-repeat: no-repeat;
+    background-position:70% 50%;
+    background-size: auto;
+    scroll-snap-align: start;
+}
+
+.container3 {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.container4 {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+         right: 0px;
+         height: 89vh;
+         top: 11vh;
+         background-color: black;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 50%;
+         transform: translateX(100%);
+         transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 100;
+    }
+    .burger div {
+        display: block;
+    }
+    .burger {
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .nav {
+        height: 11vh;
+    }
+    
+    #logo {
+        letter-spacing: 8px;
+        font-size: 30px;
+    
+    }
+    
+    .nav-links {
+        width: 60%;
+    }
+    
+    .nav li {
+        color: white;
+        font-size: 20px;
+        padding: 0 5px 0 0;
+    }
+    
+    #filler1 {
+        width: 100%;
+        height: 20vh;
+    }
+    
+    .container1 {
+        width: 100%;
+        height: 89vh;
+        background-image: url("./Image/1531546459233-kopi.jpg");
+        background-repeat: no-repeat;
+        background-position:40% 10%;
+        background-size: auto;
+    }
+    
+    .container1 h1{
+        font-size: 70px;
+        text-align: center;
+        width: 100%;
+        color: white;
+        margin: auto;
+    }
+    
+    .container1 p{
+        margin: auto;
+        width: 85%;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .container2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url('./Image/1553459502845-kopi.jpg');
+        background-repeat: no-repeat;
+        background-position:70% 50%;
+        background-size: auto;
+        scroll-snap-align: start;
+    }
+    
+    .container3 {
+        width: 100%;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+    
+    .container4 {
+        width: 100%;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+    
+    .burger div {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: white;
+    }
+
+    .burger {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: white;
+        display: none;
+    }
+}
+
+
+
+.nav-active {
+    transform: translateX(0%);
+}
